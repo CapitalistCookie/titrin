@@ -1,0 +1,39 @@
+# Comparison/debug screenshots
+*.png
+!site/images/*.png
+*.jpg
+!site/images/*.jpg
+
+# Temp files
+comp-*
+cmp-*
+cmp2-*
+orig-*
+final-*
+v*-*.png
+screenshot-*.png
+current-*.png
+enhanced-*.png
+
+# Source/crawl data (not needed for deployment)
+pages/
+mirror/
+full-mirror/
+visual-audit/
+catalog.json
+site-crawler.py
+visual-audit.py
+e2e-tests.py
+
+# Original unoptimized images
+site/images-original/
+
+# Node
+node_modules/
+package.json
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+site/images-original/
