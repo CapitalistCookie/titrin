@@ -162,6 +162,12 @@
 							<textarea name="message" class="form-group__textarea" placeholder="Message" rows="5"></textarea>
 						</div>
 
+												<!-- Honeypot - hidden from users, catches bots -->
+						<div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+							<input type="text" name="website" tabindex="-1" autocomplete="off">
+						</div>
+						<input type="hidden" name="_ts" id="form-ts" value="">
+
 						<div class="contact-form__submit">
 							<button type="submit" class="btn btn--dark">Submit</button>
 						</div>
@@ -274,6 +280,7 @@
   <button class="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
 
   <script>requestAnimationFrame(function(){document.body.classList.add("loaded")})</script>
+  <script>document.getElementById("form-ts").value=Date.now()</script>
   <script defer src="js/main.js?v=1774853017"></script>
 </body>
 </html>

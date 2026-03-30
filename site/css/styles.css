@@ -8,3 +8,6 @@ html{scrollbar-width:thin;scrollbar-color:#c0c8d4 transparent}
 
 /* Print optimization for articles */
 @media print{.privacy-page{max-width:100%;padding:20px 0}.privacy-page a{color:#000;text-decoration:underline}.privacy-page a[href]::after{content:" (" attr(href) ")"}.privacy-page table{border:1px solid #ccc}.privacy-page th,.privacy-page td{border:1px solid #ccc;padding:6px}}
+
+/* Blog card hover */
+.blog-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08);transform:translateY(-2px)}

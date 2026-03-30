@@ -129,7 +129,7 @@ e.preventDefault();
 var card = btn.closest('.service-card');
 var isExpanded = card.classList.toggle('is-expanded');
 var arrow = btn.querySelector('span');
-if (arrow) arrow.innerHTML = isExpanded ? '&#8593;' : '&#8595;';
+if (arrow) arrow.textContent = isExpanded ? '2191' : '2193';
 });
 });
 var cd = document.querySelector('.custom-cursor');
