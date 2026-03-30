@@ -76,6 +76,10 @@ requestAnimationFrame(function() {
 
     // Sync from keyboard/anchor/programmatic scroll
     window.addEventListener('keydown', function(e) {
+      // Don't intercept when user is typing in a form field
+      var tag = document.activeElement && document.activeElement.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement.isContentEditable) return;
+
       if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
         target = Math.min(target + window.innerHeight * 0.8, document.body.scrollHeight - window.innerHeight);
         e.preventDefault();
