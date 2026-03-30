@@ -36,7 +36,7 @@ ${message}
           },
         ],
         from: {
-          email: 'noreply@titrin.com',
+          email: 'noreply@titrin.ca',
           name: 'Titrin Website',
         },
         reply_to: {
