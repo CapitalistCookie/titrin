@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Titrin Agrisoil Solutions - Resources</title>
+    <link>https://titrin.ca/blog/</link>
+    <description>Practical guides on ALC applications, soil assessments, farm plans, and agricultural land use in British Columbia.</description>
+    <language>en-ca</language>
+    <lastBuildDate>Mon, 30 Mar 2026 00:00:00 -0700</lastBuildDate>
+    <atom:link href="https://titrin.ca/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>How to Apply to the Agricultural Land Commission in BC</title>
+      <link>https://titrin.ca/blog/alc-application-guide.html</link>
+      <description>Step-by-step guide to the ALC application process — fees, timelines, required documents, and what to expect at each stage.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 -0700</pubDate>
+      <guid>https://titrin.ca/blog/alc-application-guide.html</guid>
+    </item>
+    <item>
+      <title>Soil Deposit and Fill Rules on ALR Land in BC</title>
+      <link>https://titrin.ca/blog/soil-deposit-alr-guide.html</link>
+      <description>What you can and can't do with soil and fill on agricultural land — thresholds, prohibited materials, and when you need an application.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 -0700</pubDate>
+      <guid>https://titrin.ca/blog/soil-deposit-alr-guide.html</guid>
+    </item>
+    <item>
+      <title>Getting Farm Classification in BC: Requirements and Process</title>
+      <link>https://titrin.ca/blog/farm-classification-bc.html</link>
+      <description>Income thresholds, application deadlines, farm plan requirements, and how to qualify for farm tax status through BC Assessment.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 -0700</pubDate>
+      <guid>https://titrin.ca/blog/farm-classification-bc.html</guid>
+    </item>
+    <item>
+      <title>What You Can and Can't Do on ALR Land in BC</title>
+      <link>https://titrin.ca/blog/permitted-uses-alr.html</link>
+      <description>A plain-language breakdown of permitted uses in BC's Agricultural Land Reserve — what's allowed by right, what needs an application.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 -0700</pubDate>
+      <guid>https://titrin.ca/blog/permitted-uses-alr.html</guid>
+    </item>
+  </channel>
+</rss>

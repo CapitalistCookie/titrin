@@ -3,3 +3,8 @@
 /projects /projects.html 200
 /privacy  /privacy-policy.html 200
 /privacy-policy /privacy-policy.html 200
+/blog/alc-guide  /blog/alc-application-guide.html  200
+/blog/soil-guide /blog/soil-deposit-alr-guide.html 200
+/blog/farm-class /blog/farm-classification-bc.html  200
+/blog/alr-uses   /blog/permitted-uses-alr.html      200
+/resources       /blog/                              301
