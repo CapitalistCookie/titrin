@@ -1,13 +1,16 @@
+const EMAIL_WORKER = "https://titrin-email.j1115cruz.workers.dev";
+const AUTH_KEY = "b19ae04663c2772fec8c9e690c8a04a0";
+
 export async function onRequestPost(context) {
   try {
     const formData = await context.request.formData();
 
-    // Honeypot check
+    // Honeypot
     if (formData.get('website')) {
       return Response.redirect(new URL('/thank-you', context.request.url).toString(), 302);
     }
 
-    // Timing check
+    // Timing
     const ts = parseInt(formData.get('_ts') || '0');
     if (ts && (Date.now() - ts) < 3000) {
       return Response.redirect(new URL('/thank-you', context.request.url).toString(), 302);
@@ -30,48 +33,21 @@ export async function onRequestPost(context) {
       return Response.redirect(new URL('/contact?error=1', context.request.url).toString(), 302);
     }
 
-    const body = [
-      'New Contact Form Submission',
-      '===========================',
-      '',
-      'Name: ' + name,
-      'Email: ' + email,
-      'Property Address/PID: ' + address,
-      'ALR: ' + alr,
-      'Project Type: ' + project,
-      'Timeline: ' + timeline,
-      '',
-      'Message:',
-      message,
-    ].join('\n');
-
-    // Try Cloudflare Email Worker binding
-    if (context.env && context.env.EMAIL) {
-      try {
-        const mime = [
-          'From: "Titrin Website" <noreply@titrin.ca>',
-          'To: contact@titrin.ca',
-          'Reply-To: ' + name + ' <' + email + '>',
-          'Subject: New enquiry from ' + name,
-          'Content-Type: text/plain; charset=utf-8',
-          'MIME-Version: 1.0',
-          '',
-          body,
-        ].join('\r\n');
-
-        const msg = new EmailMessage('noreply@titrin.ca', 'contact@titrin.ca', new Response(mime).body);
-        await context.env.EMAIL.send(msg);
-        console.log('Email sent via binding');
-      } catch (e) {
-        console.error('Email binding error:', e.message);
-      }
+    // Send via email Worker
+    try {
+      const res = await fetch(EMAIL_WORKER, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Auth-Key': AUTH_KEY,
+        },
+        body: JSON.stringify({ name, email, address, alr, project, timeline, message }),
+      });
+      const result = await res.json();
+      console.log('Email worker response:', JSON.stringify(result));
+    } catch (e) {
+      console.error('Email worker error:', e.message);
     }
-
-    // Always log submission to Workers logs (visible in Cloudflare dashboard)
-    console.log('SUBMISSION:', JSON.stringify({
-      name, email, address, alr, project, timeline, message,
-      time: new Date().toISOString()
-    }));
 
     return Response.redirect(new URL('/thank-you', context.request.url).toString(), 302);
   } catch (err) {

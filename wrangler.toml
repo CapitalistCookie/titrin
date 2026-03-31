@@ -1,6 +1,2 @@
 name = "titrin"
 pages_build_output_dir = "site"
-
-[[send_email]]
-name = "EMAIL"
-destination_address = "contact@titrin.ca"
