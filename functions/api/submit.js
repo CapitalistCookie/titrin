@@ -1,7 +1,7 @@
 const EMAIL_WORKER = "https://titrin-email.j1115cruz.workers.dev";
-const AUTH_KEY = "b19ae04663c2772fec8c9e690c8a04a0";
 
 export async function onRequestPost(context) {
+  const AUTH_KEY = context.env.EMAIL_AUTH_KEY || "";
   try {
     const formData = await context.request.formData();
 
