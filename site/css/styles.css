@@ -99,3 +99,9 @@ html{scrollbar-width:thin;scrollbar-color:#c0c8d4 transparent}
 .services, .why-choose, .projects-preview, .steps { padding: 40px 16px; }
 
 }
+
+/* Contact card icons - neutral dark instead of blue */
+.contact-card__icon{background:var(--color-off-white);color:var(--color-dark-text)}
+.contact-card__action{color:var(--color-dark-text)}
+.contact-card__action:hover{color:var(--color-primary)}
+@media(max-width:809px){.contact-card{border:none;background:transparent;padding:12px 0}.contact-card__icon{width:36px;height:36px}}
