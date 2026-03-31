@@ -11,3 +11,91 @@ html{scrollbar-width:thin;scrollbar-color:#c0c8d4 transparent}
 
 /* Blog card hover */
 .blog-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08);transform:translateY(-2px)}
+
+/* ===== MOBILE PARITY FIXES ===== */
+@media (max-width: 809px) {
+
+/* Hide sticky CTA on mobile */
+.sticky-cta { display: none !important; }
+
+/* Hide custom cursor elements on mobile */
+.custom-cursor, .custom-cursor-ring { display: none !important; }
+
+/* Fix header bar on mobile */
+.site-header { padding: 8px 12px 0; }
+.header-bar { padding: 0 16px; height: 60px; }
+
+/* Who We Help card - less padding on mobile */
+.who-we-help-card { padding: 24px 20px; max-width: 100%; }
+.who-we-help-text { font-size: 16px; }
+
+/* Services - compact deliverables button */
+.service-link { font-size: 13px; padding: 8px 16px; border-radius: 10px; }
+
+/* Service cards - single column, less padding */
+.services-grid { grid-template-columns: 1fr; gap: 16px; }
+.service-card { padding: 24px 20px; border-radius: 16px; }
+.service-card h3 { font-size: 18px; }
+
+/* Project cards - fix cut off images */
+.projects-grid { grid-template-columns: 1fr; gap: 20px; }
+.project-card-image { aspect-ratio: 16 / 10; border-radius: 12px; }
+.project-card-body { padding: 12px 0 8px; }
+.project-card-body h3 { font-size: 15px; }
+.project-client { font-size: 11px; }
+
+/* Features list - no borders on mobile */
+.feature-row { padding: 20px 16px; }
+.feature-row-icon { width: 40px; height: 40px; min-width: 40px; }
+.feature-row-icon svg { width: 20px; height: 20px; }
+.feature-row-content h3 { font-size: 16px; }
+.feature-row-content p { font-size: 13px; }
+
+/* Steps section on mobile */
+.steps-grid { grid-template-columns: 1fr; gap: 32px; }
+.step-icon-wrap { width: 100px; height: 100px; }
+.step-icon-bg { width: 100px; height: 100px; }
+.step-icon-circle { width: 48px; height: 48px; }
+.step-icon-circle svg { width: 24px; height: 24px; }
+
+/* CTA banner on mobile */
+.cta-banner { padding: 40px 20px; }
+.cta-banner h2 { font-size: 22px; }
+
+/* Trust badges on mobile - smaller */
+.trust-badges { gap: 10px; }
+.trust-badges img { width: 48px; height: 48px; padding: 6px; }
+
+/* Footer on mobile */
+.footer-grid { grid-template-columns: 1fr; gap: 32px; }
+.footer-logo { width: 150px; }
+
+/* Contact page - hide contact cards section on mobile like original */
+.contact-info-wrapper { display: block; }
+.contact-card { padding: 16px; }
+.contact-card__icon { width: 40px; height: 40px; }
+
+/* Contact hero image on mobile */
+.contact-hero { padding: 100px 16px 40px; }
+.contact-hero__inner { grid-template-columns: 1fr; gap: 20px; }
+
+/* Back to top - smaller on mobile */
+.back-to-top { width: 40px; height: 40px; bottom: 20px; right: 20px; }
+
+/* Wave dividers smaller on mobile */
+.wave-divider { height: 24px; }
+.wave-divider svg { height: 24px; }
+
+/* About hero on mobile */
+.about-hero { grid-template-columns: 1fr; gap: 24px; padding: 100px 16px 48px; }
+
+/* Scroll progress thinner on mobile */
+.scroll-progress { height: 2px; }
+
+/* Page intro (projects page) on mobile */
+.page-intro { padding: 100px 16px 40px; }
+
+/* Section padding on mobile */
+.services, .why-choose, .projects-preview, .steps { padding: 40px 16px; }
+
+}
